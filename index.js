@@ -1,6 +1,7 @@
 var listRowCol = [[1,1],[1,6],[2,4],[2,9],[3,2],[3,7],[4,4],[4,9],[5,1],[5,6],[6,3],[6,8]]
 
 $("button").click(function(){
+    document.querySelector(".live-score").innerHTML = score + " Points";
     var timer = 60;
     var now = new Date().getTime();
     var interval = setInterval(function(){
