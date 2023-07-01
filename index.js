@@ -1,7 +1,7 @@
 var listRowCol = [[1,1],[1,6],[2,4],[2,9],[3,2],[3,7],[4,4],[4,9],[5,1],[5,6],[6,3],[6,8]]
 
-var timer = 60;
 $("button").click(function(){
+    var timer = 60;
     var now = new Date().getTime();
     var interval = setInterval(function(){
         var randomHole = Math.floor(Math.random() * (listRowCol.length)) ;
@@ -14,6 +14,7 @@ $("button").click(function(){
         },1500)
         if (new Date().getTime() - now > 62000) {
             clearInterval(interval);
+            score = 0;
             return;
         }
         $(".row-" + randomRow +".col-"+ randomCol).addClass("mole");
@@ -41,5 +42,7 @@ $(document).click(function(event){
         console.log("YOU MISSED THE TARGET")
     }
 })
+
 document.querySelector(".live-score").innerHTML = score + " Points";
 document.querySelector(".live-timer").innerHTML =  timer + " seconds";
+
