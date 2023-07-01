@@ -20,13 +20,13 @@ $("button").click(function(){
         }
         $(".row-" + randomRow +".col-"+ randomCol).addClass("mole");
         document.querySelector(".live-timer").innerHTML = timer + " seconds";
-        timer--;
+        timer = 60 - Math.floor((new Date().getTime() - now)/1000);;
     },1000)
 })
 
 var score = 0;
 
-$(document).click(function(event){
+$(.container).click(function(event){
     var l = $(event.target).attr("class");
     var colString = l.slice(14,15);
     var rowString = l.slice(8,9);
