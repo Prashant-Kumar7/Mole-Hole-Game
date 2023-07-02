@@ -1,5 +1,7 @@
 var listRowCol = [[1,1],[1,6],[2,4],[2,9],[3,2],[3,7],[4,4],[4,9],[5,1],[5,6],[6,3],[6,8]]
 
+var score = 0;
+
 $("button").click(function(){
     document.querySelector(".live-score").innerHTML = score + " Points";
     var timer = 60;
@@ -16,23 +18,23 @@ $("button").click(function(){
         if (new Date().getTime() - now > 62000) {
             clearInterval(interval);
             score = 0;
+            
             return;
         }
         $(".row-" + randomRow +".col-"+ randomCol).addClass("mole");
         document.querySelector(".live-timer").innerHTML = timer + " seconds";
-        timer = 60 - Math.floor((new Date().getTime() - now)/1000);;
+        timer = 60 - Math.floor((new Date().getTime() - now)/1000);
     },1000)
 })
 
-var score = 0;
 
-$(.container).click(function(event){
+$(".container").click(function(event){
     var l = $(event.target).attr("class");
     var colString = l.slice(14,15);
     var rowString = l.slice(8,9);
     if(l.length > 21){
         $(".row-" + rowString +".col-"+ colString).removeClass("mole");
-        var smack = new Audio("audio/hard-slap-46388.mp3");
+        var smack = new Audio("audio/karate-chop-6357.mp3");
         smack.play();
         score=score+10;
         document.querySelector(".live-score").innerHTML = "+" +score + " Points";
@@ -43,7 +45,6 @@ $(.container).click(function(event){
         console.log("YOU MISSED THE TARGET")
     }
 })
-
 document.querySelector(".live-score").innerHTML = score + " Points";
 document.querySelector(".live-timer").innerHTML =  timer + " seconds";
 
