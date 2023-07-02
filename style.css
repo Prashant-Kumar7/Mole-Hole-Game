@@ -26,7 +26,7 @@ body{
     height: 325px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-image: url(./image/ground-img.jpg);
     padding: 20px;
     cursor: url("./image/hammer_cursor.png") 0 50,auto;
@@ -69,4 +69,31 @@ p{
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+@media(max-width: 720px){
+    .box{
+        width: 60px;
+        height: 40px;
+    }
+
+    .container{
+        width: 600px;
+        height: 240px;
+    }
+    .timer-div>p , .bottom-menu>p{
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    button{
+        font-size: 20px;
+        width: 120px;
+        height: 35px;
+        margin-top: 10px;
+    }
+
+    h1{
+        font-size: 1.7rem;
+    }
 }
