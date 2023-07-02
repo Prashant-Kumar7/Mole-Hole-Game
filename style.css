@@ -26,7 +26,7 @@ body{
     height: 325px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-image: url(./image/ground-img.jpg);
     padding: 20px;
     cursor: url("./image/hammer_cursor.png") 0 50,auto;
